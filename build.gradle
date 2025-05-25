@@ -1,0 +1,39 @@
+plugins {
+    id 'java'
+}
+
+group = 'rest-api-test'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    // https://mvnrepository.com/artifact/io.rest-assured/rest-assured
+    testImplementation 'io.rest-assured:rest-assured:5.5.5'
+    // https://mvnrepository.com/artifact/com.github.java-json-tools/json-schema-validator
+    implementation 'com.github.java-json-tools:json-schema-validator:2.2.14'
+    testImplementation 'org.assertj:assertj-core:3.24.2'
+    // TestNG (for assertions)
+    testImplementation 'org.testng:testng:7.11.0'
+
+    // Extent Report dependencies
+    testImplementation 'com.aventstack:extentreports:5.1.1'
+    testImplementation 'com.aventstack:extentreports-testng-adapter:1.2.2'
+
+    testImplementation 'org.slf4j:slf4j-simple:2.0.7'
+
+
+}
+
+test {
+    useTestNG()
+
+    testLogging {
+        events "passed", "skipped", "failed"
+        showStandardStreams = true
+
+    }
+}
