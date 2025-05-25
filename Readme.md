@@ -17,7 +17,7 @@ II. Clone the Project
 
 2. Clone the project into that folder
 
-git clone https://github.com/srepala8/sauce-ui-test.git
+git clone https://github.com/srepala8/api-test-restassured.git
 
 3.open that project folder in an IntelliJ IDE
 
